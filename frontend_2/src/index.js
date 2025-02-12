@@ -4,12 +4,13 @@ import './index.css';
 import CVFSurvey from './App';
 import reportWebVitals from './reportWebVitals';
 import AllSubmissionsScreen from './AllSubmissionScreen';
-
+import UsersVital from './UsersVital.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AllSubmissionsScreen />
+    <UsersVital />
   </React.StrictMode>
 );
 
