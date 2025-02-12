@@ -8,11 +8,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017',{ 
-    dbName: 'cvf_survey'})
-  .then(()=>{
-    console.log("database connected");
-  });
+mongoose.connect('mongodb+srv://boss_1:joshq@cluster0.1sy3gyw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',{ 
+  dbName: 'cvf_survey'})
+.then(()=>{
+  console.log("database connected");
+});
 
 app.use("/survey", surveyRoutes);
 
