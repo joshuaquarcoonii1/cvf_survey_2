@@ -47,7 +47,7 @@ const genderOptions = [
   "Male","Female"];
 
 
-export default function StaffSurveyWelcome({ onClose, department, setDepartment, gender, setGender, yearsOfExperience, setYearsOfExperience ,age,setAge}) {
+export default function StaffSurveyWelcome({ onClose, department, setDepartment, gender, setGender, yearsOfExperience, setYearsOfExperience ,age,setAge,handleDepartmentChange,customDepartment, setCustomDepartment}) {
 
   const handleFormSubmit = () => {
     if ( gender && yearsOfExperience && department && age) {
@@ -131,26 +131,27 @@ Assessing VRA's Work Culture
             {option}
           </MenuItem>
         ))} </TextField>
-           <TextField
+      <TextField
         select
         label="Department"
         value={department}
-        onChange={(e) => setDepartment(e.target.value)}
+        onChange={handleDepartmentChange}
         fullWidth
         margin="normal"
-        required
       >
         {departments.map((option) => (
           <MenuItem key={option} value={option}>
             {option}
           </MenuItem>
         ))}
+        <MenuItem value="Other">Other</MenuItem>
       </TextField>
+
       {department === "Other" && (
         <TextField
           label="Please specify"
-          value={department}
-          onChange={(e) => setDepartment(e.target.value)}
+          value={customDepartment}
+          onChange={(e) => setCustomDepartment(e.target.value)}
           fullWidth
           margin="normal"
           required
