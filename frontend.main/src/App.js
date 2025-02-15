@@ -21,7 +21,7 @@ export default function CVFSurvey() {
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch("http://172.20.10.2:3000/survey/questions");
+      const response = await fetch("https://cvf-survey-2.onrender.com/survey/questions");
       const data = await response.json();
 
       if (!data || data.length === 0) {
@@ -81,7 +81,7 @@ export default function CVFSurvey() {
     };
 
     try {
-      const response = await fetch("http://172.20.10.2:3000/survey/responses", {
+      const response = await fetch("https://cvf-survey-2.onrender.com/survey/responses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
