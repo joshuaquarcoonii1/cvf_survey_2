@@ -14,6 +14,7 @@ export default function CVFSurvey() {
   const [department, setDepartment] = useState("");
   const [age, setAge] = useState("");
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+  const [customDepartment, setCustomDepartment] = useState("");
 
   useEffect(() => {
     fetchQuestions();
@@ -140,7 +141,13 @@ export default function CVFSurvey() {
     setResponses(newResponses);
   };
   const labels = ["A", "B", "C", "D"];
-
+  const handleDepartmentChange = (event) => {
+    const value = event.target.value;
+    setDepartment(value);
+    if (value !== "Other") {
+      setCustomDepartment(""); // Reset custom input if not selecting "Other"
+    }
+  };
   return (
     <Box sx={{ padding: 4, textAlign: "center", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
     <Modal
@@ -160,6 +167,8 @@ export default function CVFSurvey() {
           setDepartment={setDepartment}
           yearsOfExperience={yearsOfExperience}
           setYearsOfExperience={setYearsOfExperience}
+             customDepartment={customDepartment}
+          setCustomDepartment={setCustomDepartment}
         />
       </Modal>
 
