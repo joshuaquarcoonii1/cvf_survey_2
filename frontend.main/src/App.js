@@ -175,7 +175,7 @@ export default function CVFSurvey() {
       <Card sx={{ width: "90%", maxWidth: 800, padding: 3 }}>
         <CardContent>
           <Typography variant="h6" gutterBottom>
-            {questions.length > 0 && questions[currentQuestionIndex]?.text}
+          Question {currentQuestionIndex + 1} of {questions.length}: {questions.length > 0 && questions[currentQuestionIndex]?.text}
           </Typography>
 <Typography variant="caption" display="block" sx={{ color: "red", fontWeight: "bold", marginTop: 1 }}>
 Kindly allocate 100 points accross the statements below.</Typography>
