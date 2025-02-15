@@ -28,7 +28,6 @@ const departments = [
   "Utility Services",
   "VRA Academy (VRAA)",
   "Water Resources and Renewable Energy",
-  "Other"
 ];
 
 const yearsOfExperienceOptions = [
