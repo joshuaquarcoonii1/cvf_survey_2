@@ -169,6 +169,8 @@ export default function CVFSurvey() {
           setYearsOfExperience={setYearsOfExperience}
              customDepartment={customDepartment}
           setCustomDepartment={setCustomDepartment}
+         handleDepartmentChange={handleDepartmentChange}
+
         />
       </Modal>
 
