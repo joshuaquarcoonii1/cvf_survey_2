@@ -12,7 +12,7 @@ const ResponseDetails = () => {
   useEffect(() => {
     const fetchSubmission = async () => {
       try {
-        const response = await axios.get(`http://172.20.10.2:3000/survey/responses/${id}`);
+        const response = await axios.get(`https://cvf-survey-2.onrender.com/survey/responses/${id}`);
         setSubmission(response.data);
       } catch (err) {
         setError("Failed to load submission");
