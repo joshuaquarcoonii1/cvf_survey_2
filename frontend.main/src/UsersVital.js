@@ -65,7 +65,9 @@ export default function StaffSurveyWelcome({ onClose, department, setDepartment,
       position: 'absolute', 
       top: '50%', 
       left: '50%', 
-      transform: 'translate(-50%, -50%)' 
+      transform: 'translate(-50%, -50%)' ,
+     overflowY: "auto",
+       maxHeight: "100vh"
     }}>
      
 
