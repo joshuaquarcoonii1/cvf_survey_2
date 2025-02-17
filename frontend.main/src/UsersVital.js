@@ -99,7 +99,7 @@ Assessing VRA's Work Culture        </Typography>
       </Box>
 
       {/* Instruction Modal */}
-      <Modal open={isInstructionModalOpen} onClose={() => setIsInstructionModalOpen(false)}
+      <Modal open={isInstructionModalOpen} onClose={() => {}}
         BackdropComponent={Backdrop} BackdropProps={{ sx: { backgroundColor: "rgba(0,0,0,0.8)" } }}>
         <Box sx={{
           width: 600, padding: 4, margin: 'auto', backgroundColor: 'white',
