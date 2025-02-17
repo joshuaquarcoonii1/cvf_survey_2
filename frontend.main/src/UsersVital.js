@@ -57,7 +57,7 @@ export default function StaffSurveyWelcome({ onClose, department, setDepartment,
   };
   return (
     <Box sx={{ 
-      width: 550, 
+      width: 700, 
       padding: 4, 
       margin: 'auto', 
       backgroundColor: 'white', 
