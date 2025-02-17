@@ -48,8 +48,7 @@ export default function StaffSurveyWelcome({
             WebkitTextFillColor: "transparent", letterSpacing: 2
           }}>
           <img src={iconImage} alt="icon" style={{ width: 50, height: 50 }} /><br />
-          Welcome to the Staff Survey
-        </Typography>
+Assessing VRA's Work Culture        </Typography>
 
         <Typography variant="caption" display="block" sx={{ textAlign: "justify", lineHeight: 1.6, marginBottom: 2 }}>
           This survey, based on the <strong>Competing Values Culture Assessment</strong> developed by <strong>Robert E. Quinn</strong> and <strong>Kim S. Cameron</strong>, is designed to help the <strong>Corporate Strategy Department</strong> understand VRA’s current workplace culture and identify how it can be improved to achieve VRA’s objectives and drive long-term success.
