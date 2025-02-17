@@ -155,7 +155,8 @@ export default function CVFSurvey() {
         onClose={() => setIsWelcomeModalOpen(false)}
         aria-labelledby="welcome-modal-title"
         aria-describedby="welcome-modal-description"
-        BackdropProps={{ onClick: (e) => e.stopPropagation() }}
+        BackdropProps={{ onClick: (e) => e.stopPropagation() , timeout: 500,
+          sx: { backgroundColor: "rgb(180, 171, 171)" },}}
       >
         <StaffSurveyWelcome
           onClose={() => setIsWelcomeModalOpen(false)}
