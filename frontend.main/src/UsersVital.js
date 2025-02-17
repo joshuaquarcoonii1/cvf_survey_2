@@ -50,9 +50,17 @@ export default function StaffSurveyWelcome({
           <img src={iconImage} alt="icon" style={{ width: 50, height: 50 }} /><br />
 Assessing VRA's Work Culture        </Typography>
 
-        <Typography variant="caption" display="block" sx={{ textAlign: "justify", lineHeight: 1.6, marginBottom: 2 }}>
-          This survey, based on the <strong>Competing Values Culture Assessment</strong> developed by <strong>Robert E. Quinn</strong> and <strong>Kim S. Cameron</strong>, is designed to help the <strong>Corporate Strategy Department</strong> understand VRA’s current workplace culture and identify how it can be improved to achieve VRA’s objectives and drive long-term success.
-        </Typography>
+        <Typography 
+  variant="caption" 
+  display="block" 
+  sx={{ textAlign: "justify", lineHeight: 1.6, marginBottom: 2, fontSize: "1rem" }} // Adjust font size
+>
+  This survey, based on the <strong>Competing Values Culture Assessment</strong> developed by 
+  <strong>Robert E. Quinn</strong> and <strong>Kim S. Cameron</strong>, is designed to help the 
+  <strong>Corporate Strategy Department</strong> understand VRA’s current workplace culture and 
+  identify how it can be improved to achieve VRA’s objectives and drive long-term success.
+</Typography>
+
 
         <Typography variant="caption" display="block" sx={{ color: "red", fontWeight: "bold", marginTop: 1 }}>
           This survey has been designed to be anonymous.
