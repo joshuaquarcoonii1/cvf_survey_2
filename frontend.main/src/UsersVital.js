@@ -57,7 +57,7 @@ export default function StaffSurveyWelcome({ onClose, department, setDepartment,
   };
   return (
     <Box sx={{ 
-      width: 700, 
+      width: 800, 
       padding: 4, 
       margin: 'auto', 
       backgroundColor: 'white', 
@@ -67,7 +67,7 @@ export default function StaffSurveyWelcome({ onClose, department, setDepartment,
       left: '50%', 
       transform: 'translate(-50%, -50%)' ,
      overflowY: "auto",
-       maxHeight: "100vh"
+       maxHeight: "100%"
     }}>
      
 
