@@ -252,6 +252,10 @@ Kindly allocate 100 points accross the statements below.</Typography>
         onClose={() => {}}
         aria-labelledby="success-modal-title"
         aria-describedby="success-modal-description"
+           BackdropProps={{
+        timeout: 500,
+        sx: { backgroundColor: "rgba(0, 0, 0, 1)" }, // Makes background dark
+      }}
       >
         <Box sx={{ width: 400, padding: 4, margin: 'auto', marginTop: '10%', backgroundColor: 'white', borderRadius: 2, textAlign: 'center' }}>
       <CheckCircleIcon sx={{ color: "green", fontSize: 100 }} />
