@@ -32,7 +32,7 @@ const AllSubmissionsScreen = () => {
         submission.responses.map((resp) => ({
           "ID": idMapping[submission._id],
           "Age": submission.age,
-          "Department":submission.department ?? submission.customDepartment,
+          "Department": submission.department ?? submission.customDepartment,
           "Gender": submission.gender,
           "Years of Experience": submission.yearsOfExperience,
           "Question": resp.questionId.text || resp.questionId, // Include question text if available
@@ -57,7 +57,7 @@ const AllSubmissionsScreen = () => {
   useEffect(() => {
     const fetchSubmissions = async () => {
       try {
-        const response = await axios.get("https://cvf-survey-2.onrender.com/survey/responses");
+        const response = await axios.get("http://192.168.0.178:3000/survey/responses");
         setSubmissions(response.data);
       } catch (err) {
         setError("Failed to load submissions");
@@ -73,7 +73,7 @@ const AllSubmissionsScreen = () => {
   if (error) return <Typography color="error">{error}</Typography>;
   // const handleDownload = async () => {
   //   try {
-  //     const response = await fetch("http://172.20.10.2:3000/survey/export/excel", {
+  //     const response = await fetch("http://192.168.0.178:3000/survey/export/excel", {
   //       responseType: "blob", // Important to handle binary data
   //     });
   
