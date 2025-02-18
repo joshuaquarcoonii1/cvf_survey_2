@@ -145,7 +145,7 @@ export default function CVFSurvey() {
     const value = event.target.value;
     setDepartment(value);
     if (value !== "Other") {
-      setCustomDepartment(""); // Reset custom input if not selecting "Other"
+      setDepartment(""); // Reset custom input if not selecting "Other"
     }
   };
   return (
