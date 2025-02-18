@@ -57,7 +57,7 @@ const AllSubmissionsScreen = () => {
   useEffect(() => {
     const fetchSubmissions = async () => {
       try {
-        const response = await axios.get("http://192.168.0.178:3000/survey/responses");
+        const response = await axios.get("https://cvf-survey-2.onrender.com/survey/responses");
         setSubmissions(response.data);
       } catch (err) {
         setError("Failed to load submissions");
