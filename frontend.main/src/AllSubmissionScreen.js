@@ -32,7 +32,7 @@ const AllSubmissionsScreen = () => {
         submission.responses.map((resp) => ({
           "ID": idMapping[submission._id],
           "Age": submission.age,
-          "Department": submission.department||submission.customDepartment,
+          "Department": submission.department,
           "Gender": submission.gender,
           "Years of Experience": submission.yearsOfExperience,
           "Question": resp.questionId.text || resp.questionId, // Include question text if available
