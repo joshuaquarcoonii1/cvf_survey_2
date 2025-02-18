@@ -39,7 +39,7 @@ export default function StaffSurveyWelcome({
       <Box sx={{
         width: 800, padding: 4, margin: 'auto', backgroundColor: 'white',
         borderRadius: 2, position: 'absolute', top: '50%', left: '50%',
-        transform: 'translate(-50%, -50%)', overflowY: "auto", maxHeight: "700px"
+        transform: 'translate(-50%, -50%)', overflowY: "auto", maxHeight: "100vh"
       }}>
         <Typography variant="h5" gutterBottom align="center"
           sx={{
@@ -130,6 +130,7 @@ Assessing VRA's Work Culture        </Typography>
           </Typography>
           <Button variant="contained" color="success" sx={{ marginTop: 3 }} onClick={() => {
             setIsInstructionModalOpen(false);
+              
             onClose(); // Proceed to the actual survey
           }}>
             Continue
