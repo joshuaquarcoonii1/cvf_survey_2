@@ -266,9 +266,7 @@ Kindly allocate 100 points accross the statements below.</Typography>
           <Typography variant="body1" id="success-modal-description" sx={{ marginTop: 2 }}>
             Thank you!
           </Typography>
-               <Button variant="contained" href="https://cvf-survey-2.vercel.app/">
-  Send Another Response
-</Button>
+
         </Box>
       </Modal>
       
