@@ -39,7 +39,7 @@ export default function StaffSurveyWelcome({
       <Box sx={{
         width: 800, padding: 4, margin: 'auto', backgroundColor: 'white',
         borderRadius: 2, position: 'absolute', top: '50%', left: '50%',
-        transform: 'translate(-50%, -50%)', overflowY: "auto", maxHeight: "100vh"
+        transform: 'translate(-50%, -50%)', overflowY: "auto", maxHeight: "800px"
       }}>
         <Typography variant="h5" gutterBottom align="center"
           sx={{
