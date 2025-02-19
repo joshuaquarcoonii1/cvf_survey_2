@@ -95,7 +95,7 @@ const AllSubmissionsScreen = () => {
           <ListItem key={item._id} disablePadding>
             <ListItemButton onClick={() => navigate(`/submission/${item._id}`)}>
               <ListItemText
-                primary={`Submission by ${item.department ?? item.customDepartment}`}
+primary={`Submission by ${item.department === "Other" ? item.customDepartment : item.department}`}
                 secondary={
                   <>
                     <Typography component="span" variant="body2" color="textPrimary">
