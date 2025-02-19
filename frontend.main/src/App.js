@@ -158,6 +158,8 @@ export default function CVFSurvey() {
         BackdropProps={{ onClick: (e) => e.stopPropagation() , timeout: 500,
           sx: { backgroundColor: "rgb(180, 171, 171)" },}}
       >
+              <Box  sx={{ flex: 1, overflowY: "auto", maxHeight: "auto", paddingRight: 2 }}>
+
         <StaffSurveyWelcome
           onClose={() => setIsWelcomeModalOpen(false)}
           age={age}
@@ -172,7 +174,7 @@ export default function CVFSurvey() {
           setCustomDepartment={setCustomDepartment}
          handleDepartmentChange={handleDepartmentChange}
 
-        />
+        /></Box>
       </Modal>
 
       <Card sx={{ width: "90%", maxWidth: 800, padding: 3 }}>
