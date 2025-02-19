@@ -78,7 +78,7 @@ export default function CVFSurvey() {
       gender,
       yearsOfExperience,
       responses: formattedResponses,
-      department
+      department: department === "Other" ? customDepartment : department
     };
 
     try {
