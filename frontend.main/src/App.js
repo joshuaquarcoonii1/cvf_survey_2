@@ -191,14 +191,11 @@ Kindly allocate 100 points accross the statements below.</Typography>
   
   {/* Input Field on the Left */}
   <Box sx={{ display: "flex", alignItems: "center" }}>
-     <TextField
+ <TextField
   type="number"
-  value={
-    responses[currentQuestionIndex][sIndex].currentCulture === 0
-      ? ""
-      : responses[currentQuestionIndex][sIndex].currentCulture
-  }
+  value={responses[currentQuestionIndex][sIndex].currentCulture || ""}
   onChange={(event) => handleManualInput(currentQuestionIndex, sIndex, event)}
+  placeholder="0"
   sx={{ width: 80, textAlign: "center", fontWeight: "bold", marginRight: 1 }}
   inputProps={{ min: 0, max: 100 }}
 />
