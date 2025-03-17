@@ -150,8 +150,9 @@ export default function CVFSurvey() {
     }
   };
   return (
-    // <Box sx={{ padding: 4, textAlign: "center", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
     <div>
+    // <Box sx={{ padding: 4, textAlign: "center", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+    
   <CVFModal />
 //     <Modal
 //         open={isWelcomeModalOpen}
@@ -275,8 +276,8 @@ export default function CVFSurvey() {
 
 //         </Box>
 //       </Modal>
-    </div>
-    // </Box>
     
+    // </Box>
+    </div>
   );
 }
