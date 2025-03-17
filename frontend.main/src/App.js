@@ -3,6 +3,7 @@ import { Button, Card,TextField, CardContent, Typography, Box, IconButton,Modal 
 import { Add, Remove } from "@mui/icons-material";
 import StaffSurveyWelcome from "./UsersVital"; // Adjust the import path as needed
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CVFModal from "./CVFModal";
 
 export default function CVFSurvey() {
   const [questions, setQuestions] = useState([]);
@@ -150,128 +151,129 @@ export default function CVFSurvey() {
   };
   return (
     <Box sx={{ padding: 4, textAlign: "center", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-    <Modal
-        open={isWelcomeModalOpen}
-        onClose={() => setIsWelcomeModalOpen(false)}
-        aria-labelledby="welcome-modal-title"
-        aria-describedby="welcome-modal-description"
-        BackdropProps={{ onClick: (e) => e.stopPropagation() , timeout: 500,
-          sx: { backgroundColor: "rgb(180, 171, 171)" },}}
-      >
-              <Box  sx={{ flex: 1, overflowY: "auto", maxHeight: "auto", paddingRight: 2 }}>
+  <CVFModal />
+//     <Modal
+//         open={isWelcomeModalOpen}
+//         onClose={() => setIsWelcomeModalOpen(false)}
+//         aria-labelledby="welcome-modal-title"
+//         aria-describedby="welcome-modal-description"
+//         BackdropProps={{ onClick: (e) => e.stopPropagation() , timeout: 500,
+//           sx: { backgroundColor: "rgb(180, 171, 171)" },}}
+//       >
+//               <Box  sx={{ flex: 1, overflowY: "auto", maxHeight: "auto", paddingRight: 2 }}>
 
-        <StaffSurveyWelcome
-          onClose={() => setIsWelcomeModalOpen(false)}
-          age={age}
-          setAge={setAge}
-          gender={gender}
-          setGender={setGender}
-          department={department}
-          setDepartment={setDepartment}
-          yearsOfExperience={yearsOfExperience}
-          setYearsOfExperience={setYearsOfExperience}
-             customDepartment={customDepartment}
-          setCustomDepartment={setCustomDepartment}
-         handleDepartmentChange={handleDepartmentChange}
+//         <StaffSurveyWelcome
+//           onClose={() => setIsWelcomeModalOpen(false)}
+//           age={age}
+//           setAge={setAge}
+//           gender={gender}
+//           setGender={setGender}
+//           department={department}
+//           setDepartment={setDepartment}
+//           yearsOfExperience={yearsOfExperience}
+//           setYearsOfExperience={setYearsOfExperience}
+//              customDepartment={customDepartment}
+//           setCustomDepartment={setCustomDepartment}
+//          handleDepartmentChange={handleDepartmentChange}
 
-        /></Box>
-      </Modal>
+//         /></Box>
+//       </Modal>
 
-      <Card sx={{ width: "90%", maxWidth: 800, padding: 3 }}>
-        <CardContent>
-          <Typography variant="h6" gutterBottom>
-          Question {currentQuestionIndex + 1} of {questions.length}: {questions.length > 0 && questions[currentQuestionIndex]?.text}
-          </Typography>
-<Typography variant="caption" display="block" sx={{ color: "red", fontWeight: "bold", marginTop: 1 }}>
-Kindly allocate 100 points accross the statements below.</Typography>
-          {questions.length > 0 &&
-            questions[currentQuestionIndex]?.statements.map((statement, sIndex) => (
+//       <Card sx={{ width: "90%", maxWidth: 800, padding: 3 }}>
+//         <CardContent>
+//           <Typography variant="h6" gutterBottom>
+//           Question {currentQuestionIndex + 1} of {questions.length}: {questions.length > 0 && questions[currentQuestionIndex]?.text}
+//           </Typography>
+// <Typography variant="caption" display="block" sx={{ color: "red", fontWeight: "bold", marginTop: 1 }}>
+// Kindly allocate 100 points accross the statements below.</Typography>
+//           {questions.length > 0 &&
+//             questions[currentQuestionIndex]?.statements.map((statement, sIndex) => (
               
-              <Box key={sIndex} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", border: "1px solid #ddd", padding: 2, borderRadius: 2, marginBottom: 2 }}>
+//               <Box key={sIndex} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", border: "1px solid #ddd", padding: 2, borderRadius: 2, marginBottom: 2 }}>
   
-  {/* Input Field on the Left */}
-  <Box sx={{ display: "flex", alignItems: "center" }}>
- <TextField
-  type="number"
-  value={responses[currentQuestionIndex][sIndex].currentCulture || ""}
-  onChange={(event) => handleManualInput(currentQuestionIndex, sIndex, event)}
-  placeholder="0"
-  sx={{ width: 80, textAlign: "center", fontWeight: "bold", marginRight: 1 }}
-  inputProps={{ min: 0, max: 100 }}
-/>
+//   {/* Input Field on the Left */}
+//   <Box sx={{ display: "flex", alignItems: "center" }}>
+//  <TextField
+//   type="number"
+//   value={responses[currentQuestionIndex][sIndex].currentCulture || ""}
+//   onChange={(event) => handleManualInput(currentQuestionIndex, sIndex, event)}
+//   placeholder="0"
+//   sx={{ width: 80, textAlign: "center", fontWeight: "bold", marginRight: 1 }}
+//   inputProps={{ min: 0, max: 100 }}
+// />
     
-    <IconButton onClick={() => handleChange(currentQuestionIndex, sIndex, -10)}>
-      <Remove />
-    </IconButton>
+//     <IconButton onClick={() => handleChange(currentQuestionIndex, sIndex, -10)}>
+//       <Remove />
+//     </IconButton>
 
-    <IconButton onClick={() => handleChange(currentQuestionIndex, sIndex, 10)}>
-      <Add />
-    </IconButton>
-  </Box>
+//     <IconButton onClick={() => handleChange(currentQuestionIndex, sIndex, 10)}>
+//       <Add />
+//     </IconButton>
+//   </Box>
 
-  {/* Question Text */}
-  <Typography variant="body1" sx={{ flex: 1 }}>
-  <Typography component="span" sx={{ fontWeight: "bold" }}>
-    {labels[sIndex]}.
-  </Typography> {statement.text}
-</Typography>
-</Box>
+//   {/* Question Text */}
+//   <Typography variant="body1" sx={{ flex: 1 }}>
+//   <Typography component="span" sx={{ fontWeight: "bold" }}>
+//     {labels[sIndex]}.
+//   </Typography> {statement.text}
+// </Typography>
+// </Box>
 
-            ))}
-            <LinearProgress
-              variant="determinate"
-              value={totalCurrentCulture}
-              sx={{
-                marginBottom: 2,
-                height: 10,
-                borderRadius: 5,
-                "& .MuiLinearProgress-bar": {
-                  backgroundColor: progressColor
-                }
-              }}
-            />
-          <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: totalCurrentCulture === 100 ? "green" : "red" }}>
-            Points Remaining: {100 - totalCurrentCulture}
-          </Typography>
+//             ))}
+//             <LinearProgress
+//               variant="determinate"
+//               value={totalCurrentCulture}
+//               sx={{
+//                 marginBottom: 2,
+//                 height: 10,
+//                 borderRadius: 5,
+//                 "& .MuiLinearProgress-bar": {
+//                   backgroundColor: progressColor
+//                 }
+//               }}
+//             />
+//           <Typography variant="subtitle1" sx={{ fontWeight: "bold", color: totalCurrentCulture === 100 ? "green" : "red" }}>
+//             Points Remaining: {100 - totalCurrentCulture}
+//           </Typography>
 
-          <Box sx={{ display: "flex", justifyContent: "space-between", marginTop: 3 }}>
-            <Button variant="contained" disabled={currentQuestionIndex === 0} onClick={() => setCurrentQuestionIndex((prev) => prev - 1)}>
-              Previous
-            </Button>
+//           <Box sx={{ display: "flex", justifyContent: "space-between", marginTop: 3 }}>
+//             <Button variant="contained" disabled={currentQuestionIndex === 0} onClick={() => setCurrentQuestionIndex((prev) => prev - 1)}>
+//               Previous
+//             </Button>
 
-            {currentQuestionIndex < questions.length - 1 ? (
-              <Button variant="contained" disabled={totalCurrentCulture !== 100} onClick={() => setCurrentQuestionIndex((prev) => prev + 1)}>
-                Next
-              </Button>
-            ) : (
-              <Button variant="contained" color="success" disabled={totalCurrentCulture !== 100} onClick={handleSubmit}>
-                Submit
-              </Button>
-            )}
-          </Box>
-        </CardContent>
-      </Card>
-      <Modal
-        open={isSuccessModalOpen}
-        onClose={() => {}}
-        aria-labelledby="success-modal-title"
-        aria-describedby="success-modal-description"
-           BackdropProps={{
-        timeout: 500,
-        sx: { backgroundColor:"rgb(168, 164, 164)" }, // Makes background dark
-      }}
-      >
-        <Box sx={{ width: 400, padding: 4, margin: 'auto', marginTop: '10%', backgroundColor: 'white', borderRadius: 2, textAlign: 'center' }}>
-      <CheckCircleIcon sx={{ color: "green", fontSize: 100 }} />
-          <Typography variant="h6" id="success-modal-title">
-            Your response has been successfully submitted
-          </Typography>
-          <Typography variant="body1" id="success-modal-description" sx={{ marginTop: 2 }}>
-            Thank you!
-          </Typography>
+//             {currentQuestionIndex < questions.length - 1 ? (
+//               <Button variant="contained" disabled={totalCurrentCulture !== 100} onClick={() => setCurrentQuestionIndex((prev) => prev + 1)}>
+//                 Next
+//               </Button>
+//             ) : (
+//               <Button variant="contained" color="success" disabled={totalCurrentCulture !== 100} onClick={handleSubmit}>
+//                 Submit
+//               </Button>
+//             )}
+//           </Box>
+//         </CardContent>
+//       </Card>
+//       <Modal
+//         open={isSuccessModalOpen}
+//         onClose={() => {}}
+//         aria-labelledby="success-modal-title"
+//         aria-describedby="success-modal-description"
+//            BackdropProps={{
+//         timeout: 500,
+//         sx: { backgroundColor:"rgb(168, 164, 164)" }, // Makes background dark
+//       }}
+//       >
+//         <Box sx={{ width: 400, padding: 4, margin: 'auto', marginTop: '10%', backgroundColor: 'white', borderRadius: 2, textAlign: 'center' }}>
+//       <CheckCircleIcon sx={{ color: "green", fontSize: 100 }} />
+//           <Typography variant="h6" id="success-modal-title">
+//             Your response has been successfully submitted
+//           </Typography>
+//           <Typography variant="body1" id="success-modal-description" sx={{ marginTop: 2 }}>
+//             Thank you!
+//           </Typography>
 
-        </Box>
-      </Modal>
+//         </Box>
+//       </Modal>
       
     </Box>
     
